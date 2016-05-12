@@ -23,7 +23,8 @@ var firstMatrixCode = getMatrixKey(firstMatrixCoordinate);
 var secondMatrixCode = getMatrixKey(secondMatrixCoordinate);
 var thirdMatrixCode = getMatrixKey(thirdMatrixCoordinate);
 
-chrome.storage.sync.get([firstMatrixCode, secondMatrixCode, thirdMatrixCode], function (value) {
+chrome.storage.sync.get("matrix", function (value) {
+  value = value["matrix"];
   if (value[firstMatrixCode] && value[secondMatrixCode] && value[thirdMatrixCode]) {
     $('tbody > tr:nth-child(5) > td > input').val(value[firstMatrixCode]);
     $('tbody > tr:nth-child(6) > td > input').val(value[secondMatrixCode]);

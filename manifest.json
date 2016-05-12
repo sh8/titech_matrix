@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Titech Matrix Auto Complete",
-  "description": "This extension let us login Tokyo Tech Portal easily",
+  "description": "This extension let you login Tokyo Tech Portal easily",
   "version": "1.0",
   "options_page": "register_matrix.html",
   "permissions": [
@@ -10,7 +10,7 @@
   "content_scripts": [
     {
       "matches": ["https://portal.nap.gsic.titech.ac.jp/GetAccess/Login?Template=idg_key*", "https://portal.nap.gsic.titech.ac.jp/GetAccess/Login"],
-      "js": ["js/jquery-2.2.3.min.js", "js/auto_login.js", "js/register_matrix.js"]
+      "js": ["js/jquery-2.2.3.min.js", "js/jquery.autotab.min.js", "js/auto_login.js", "js/register_matrix.js"]
     }
   ],
   "web_accessible_resources": ["register_matrix.html"]
