@@ -25,8 +25,8 @@ $(function() {
     }
   }
 
-  $('.cancel-matrix').click(cancelMatrix);
-  function cancelMatrix() {
+  $('.close-matrix').click(closeMatrix);
+  function closeMatrix() {
     window.close();
   }
 
