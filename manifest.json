@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Titech Matrix Auto Complete",
   "description": "This extension let you login Tokyo Tech Portal easily",
-  "version": "1.1",
+  "version": "1.11",
   "options_page": "register_matrix.html",
   "permissions": [
     "storage"
