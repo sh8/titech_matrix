@@ -15,9 +15,9 @@ function openRegisterMatrixPage() {
   }
 }
 
-var firstMatrixCoordinate = $('tbody > tr:nth-child(5) > th').text();
-var secondMatrixCoordinate = $('tbody > tr:nth-child(6) > th').text();
-var thirdMatrixCoordinate = $('tbody > tr:nth-child(7) > th').text();
+var firstMatrixCoordinate = $('tbody > tr:nth-child(6) > th').text();
+var secondMatrixCoordinate = $('tbody > tr:nth-child(7) > th').text();
+var thirdMatrixCoordinate = $('tbody > tr:nth-child(8) > th').text();
 
 var firstMatrixCode = getMatrixKey(firstMatrixCoordinate);
 var secondMatrixCode = getMatrixKey(secondMatrixCoordinate);
@@ -26,9 +26,9 @@ var thirdMatrixCode = getMatrixKey(thirdMatrixCoordinate);
 chrome.storage.sync.get("matrix", function (value) {
   value = value["matrix"];
   if (value[firstMatrixCode] && value[secondMatrixCode] && value[thirdMatrixCode]) {
-    $('tbody > tr:nth-child(5) > td > div > div > input').val(value[firstMatrixCode]);
-    $('tbody > tr:nth-child(6) > td > div > div > input').val(value[secondMatrixCode]);
-    $('tbody > tr:nth-child(7) > td > div > div > input').val(value[thirdMatrixCode]);
+    $('tbody > tr:nth-child(6) > td > div > div > input').val(value[firstMatrixCode]);
+    $('tbody > tr:nth-child(7) > td > div > div > input').val(value[secondMatrixCode]);
+    $('tbody > tr:nth-child(8) > td > div > div > input').val(value[thirdMatrixCode]);
     $('form[name=login]').submit();
   }
 });
