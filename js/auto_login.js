@@ -26,9 +26,9 @@ var thirdMatrixCode = getMatrixKey(thirdMatrixCoordinate);
 chrome.storage.sync.get("matrix", function (value) {
   value = value["matrix"];
   if (value[firstMatrixCode] && value[secondMatrixCode] && value[thirdMatrixCode]) {
-    $('tbody > tr:nth-last-child(5) > td > div > div > input').val(value[firstMatrixCode]);
-    $('tbody > tr:nth-last-child(4) > td > div > div > input').val(value[secondMatrixCode]);
-    $('tbody > tr:nth-last-child(3) > td > div > div > input').val(value[thirdMatrixCode]);
+    $('tbody > tr:nth-last-child(5) > td > div > div > input').value = value[firstMatrixCode];
+    $('tbody > tr:nth-last-child(4) > td > div > div > input').value = value[secondMatrixCode];
+    $('tbody > tr:nth-last-child(3) > td > div > div > input').value = value[thirdMatrixCode];
     $('form[name=login]').submit();
   }
 });

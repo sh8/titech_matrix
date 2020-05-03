@@ -38,7 +38,7 @@ $(function() {
       var keys = Object.keys(value);
       var length = keys.length;
       for(var i = 0; i < length; i++) {
-        $('input[name=' + keys[i] + ']').val(value[keys[i]]);
+        $('input[name=' + keys[i] + ']').value = value[keys[i]];
       }
     });
   }
