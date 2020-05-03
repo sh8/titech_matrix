@@ -15,9 +15,9 @@ function openRegisterMatrixPage() {
   }
 }
 
-var firstMatrixCoordinate = $('tbody > tr:nth-child(6) > th').text();
-var secondMatrixCoordinate = $('tbody > tr:nth-child(7) > th').text();
-var thirdMatrixCoordinate = $('tbody > tr:nth-child(8) > th').text();
+var firstMatrixCoordinate = $('tbody > tr:nth-last-child(5) > th').text();
+var secondMatrixCoordinate = $('tbody > tr:nth-last-child(4) > th').text();
+var thirdMatrixCoordinate = $('tbody > tr:nth-last-child(3) > th').text();
 
 var firstMatrixCode = getMatrixKey(firstMatrixCoordinate);
 var secondMatrixCode = getMatrixKey(secondMatrixCoordinate);
