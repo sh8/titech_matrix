@@ -1,8 +1,8 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Tokyotech Matrix Auto Complete",
   "description": "This extension let you login Tokyo Tech Portal easily",
-  "version": "1.14",
+  "version": "1.15",
   "options_page": "register_matrix.html",
   "permissions": [
     "storage"
@@ -13,5 +13,5 @@
       "js": ["js/jquery-2.2.3.min.js", "js/jquery.autotab.min.js", "js/auto_login.js", "js/register_matrix.js"]
     }
   ],
-  "web_accessible_resources": ["register_matrix.html"]
+  "web_accessible_resources": [{"resources": ["register_matrix.html"], "matches": ["https://*/*"]}]
 }
